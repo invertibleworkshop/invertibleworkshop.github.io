@@ -111,10 +111,7 @@
             <hr>
             
 <!-- 
-            <h3>Eric Jang</h3>
-            <h4>Normalizing Flows Tutorial</h4> 
-            <br>
-            <hr>
+
 
             <h3>Laurent Dinh</h3>
             <h4>Building a Tractable Generator Network</h4> 
@@ -129,6 +126,19 @@
             <hr> -->
 
 
+
+
+            <h3><a href="http://evjang.com/">Eric Jang</a> </h3>
+            <h4>Normalizing Flows: A Tutorial</h4> 
+            An introductory tutorial on Normalizing Flows, why they are awesome, and how to get started with researching this family of models. We will cover how to implement basic flows in JAX, discuss recent breakthroughs, and share practical tips for training and evaluating these models. Finally, we will discuss open challenges in the field, and implications of flow-based models ML for AI hardware and software. There will be live Colab notebook coding, feel free to bring a laptop if you'd like to follow along.
+            <br>   
+            <br>   
+            <strong>Bio:</strong> Eric is a research engineer at Google AI (Brain Team), working on robotic grasping and manipulation. He is interested in meta-learning for robotics, deep generative models, and Artificial Life. He received his M.Sc. in CS and Bachelors in Math/CS at Brown University in 2016.
+            <br>
+            <hr>      
+
+
+
             <h3><a href="https://jmtomczak.github.io/">Jakub Tomczak</a> </h3>
             <h4>Householder meets Sylvester: Normalizing flows for variational inference</h4> 
             Stochastic variational inference allows for posterior inference in increasingly large and complex problems using stochastic gradient ascent. However, despite its many success, it has drawbacks compared to other inference methods such as MCMC. Variational inference searches for the best posterior approximation within a parametric family of distributions, and, thus, the true posterior distribution can only be recovered exactly if it happens to be in the chosen family. In particular, with widely used simple variational families such as diagonal covariance Gaussian distributions, the variational approximation is likely to be insufficient. Therefore, designing tractable and more expressive variational families is an important problem.
@@ -139,6 +149,21 @@
             <strong>Bio:</strong> Jakub Tomczak is a deep learning research engineer at Qualcomm AI Research since October 2018. Before, he was a postdoc (Marie Sklodowska-Curie Individual-Fellow) in Amsterdam Machine Learning Lab (AMLAB) at the University of Amsterdam under Prof. Max Welling supervision, from Oct 2016 to Sept 2018. He has received Ph.D. in machine learning (with honors) from Wroclaw University of Technology (Poland) in March 2013. After Ph.D. studies he was a postdoc and an assistant professor therein, and he worked on ensemble learning, probabilistic modeling and deep learning (with a special interest in Boltzmann machines) applied to credit scoring, medicine (clinical data) and image analysis. Recently, his research is focused on deep generative modeling (Variational Auto-Encoders) for medical imaging and image analysis.
             <br>
             <hr>         
+
+
+
+
+            <h3><a href="http://www.jessebett.com/">Jesse Bettencourt</a> </h3>
+            <h4>Neural Ordinary Differential Equations for Continuous Normalizing Flows</h4> 
+            This talk will review a family of continuous-depth neural network models, highlighting their properties, such as invertibility, which make them well-suited to normalizing flows. Instead of specifying a discrete sequence of hidden layers, we parameterize the derivative of hidden state with a neural network. This instantaneous change in hidden state along with an initial state given by model inputs, such as data, defines an initial value problem. The output of the model is computed by solving the initial value problem, integrating the derivative, with a numerical solver. 
+            These continuous-depth models have constant memory cost, adapt their evaluation strategy to each input, and can explicitly trade numerical precision for computational cost. Another significant benefit is that the model can be inverted by integrating the parameterized dynamics backwards in time. 
+            In addition to parameterizing and integrating the change in hidden state we can also track the corresponding instantaneous change in probability density, which we call Continuous Normalizing Flows. This results in an invertible generative model with unbiased density estimation and one-pass sampling. Further, by estimating terms in the change of density we can scale to high-dimensional data without restricting model architecture in a method called FFJORD.
+            <br>   
+            <br>   
+            <strong>Bio:</strong> Jesse Bettencourt is a graduate student in Machine Learning at the University of Toronto and the Vector Institute supervised by Drs. David Duvenaud and Roger Grosse. He is currently pursuing follow-up research on Neural Ordinary Differential Equations, and is generally interested in approximate inference for latent variable models. He also teaches Probabilistic Learning and Reasoning.
+            <br>
+            <hr>    
+
 
 
             <h3> <a href="https://jhjacobsen.github.io/">Jorn-Henrik Jacobsen</a> </h3>  
