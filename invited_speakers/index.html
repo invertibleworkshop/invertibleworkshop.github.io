@@ -82,9 +82,11 @@
           <li><a href="../index.html">Home</a></li>
           <li><a href="../schedule/index.html">Schedule</a></li>
           <li><a href="../call/index.html">Call for Papers</a></li>
+          <li><a href="../reviewer_instructions/index.html">Reviewer Instructions</a></li>
           <li><a href="../author_instructions/index.html">Author Instructions</a></li>
+          <li><a href="../how_it_works/index.html">Virtual Workshop: How It Works</a></li>
           <li><a href="../accepted_papers/index.html">Accepted Papers</a></li>
-          <li><a href="./index.html">Invited Speakers</a></li>
+          <li><a href="../invited_speakers/index.html">Invited Speakers</a></li>
         </ul>
         <hr>
         <ul class="nav temp">
@@ -109,71 +111,99 @@
             
             <h2>Invited Speakers</h2>
             <hr>
-            
-<!-- 
-
-
-            <h3>Laurent Dinh</h3>
-            <h4>Building a Tractable Generator Network</h4> 
-            <br>
-            <strong>Bio:</strong> Laurent Dinh is a research scientist at Google Brain Montréal. His research focus has been on deep generative models, probabilistic modeling, and generalization in deep learning. He's best known for his contribution in normalizing flows generative models, such as NICE and Real NVP, and questioning the conjecture on the relationship between flatness and generalization. 
-            He obtained his PhD in deep learning at Mila, under the supervision of Yoshua Bengio, during which he visited Google Brain and DeepMind. Before that, he graduated from École Centrale Paris in Applied Mathematics and from École Normale Supérieure de Cachan in machine learning and computer vision.
-            <br>
-            <hr>
-
-
-            <h3>Diederik Kingma and Prafulla Dhariwal</h3>
-            <hr> -->
 
 
 
-
-            <h3><a href="http://evjang.com/">Eric Jang</a> </h3>
-            <h4>Normalizing Flows: A Tutorial</h4> 
-            An introductory tutorial on Normalizing Flows, why they are awesome, and how to get started with researching this family of models. We will cover how to implement basic flows in JAX, discuss recent breakthroughs, and share practical tips for training and evaluating these models. Finally, we will discuss open challenges in the field, and implications of flow-based models ML for AI hardware and software. There will be live Colab notebook coding, feel free to bring a laptop if you'd like to follow along.
+            <h3><a href="https://staff.fnwi.uva.nl/m.welling/">Max Welling</a> </h3>
+            <h4>Unifying VAEs and Flows</h4> 
+            VAEs and Flows are two of the most popular methods for density estimation (well, except GANs I guess, but nevermind... 😱). In this work we will argue they are really two sides of the same coin. A flow is based on deterministically transforming an input density through an invertible transformation to a target density. If the transformation changes a volume element we pick up a log-Jacobian term. After decomposing the ELBO in the only way that was not yet considered in the literature, we find that the log-Jacobian corresponds to log[p(x|z)/q(z|x)] of a VAE, where the maps q and p are now stochastic. This suggests a third possibility that bridges the gap between the two: a surjective map which is deterministic and surjective in one direction, and probabilistic in the reverse direction. We find that these ideas unify many methods out there in the literature, such as dequantization, and augmented flows, and we also add a few new methods of our own based on our SurVAE Flows framework. If time permits I will also say a few words on a new type of flow based on the exponential map which is trivially invertible and adds a new tool to the invertible flows toolbox.
             <br>   
             <br>   
-            <strong>Bio:</strong> Eric is a research engineer at Google AI (Brain Team), working on robotic grasping and manipulation. He is interested in meta-learning for robotics, deep generative models, and Artificial Life. He received his M.Sc. in CS and Bachelors in Math/CS at Brown University in 2016.
+            <strong>Bio:</strong> Max Welling is a computer scientist who works in artificial intelligence (expert systems, machine learning, robotics). He holds a research chair in machine learning at the University of Amsterdam; is co-founder of Scyfer BV, a university spin-off in deep learning; and has held postdoc positions at the California Institute of Technology, University College London and the University of Toronto. Welling received his PhD in 1998 under supervision of Nobel laureate Gerard ‘t Hooft. He has served on the editorial boards of JMLR and JML; was an associate editor for Neurocomputing and JCGS; and has received grants from Google, Facebook, Yahoo, NSF, NIH, NWO and ONR-MUR. Currently, Welling serves on the board of the NIPS foundation and of the Data Science Research Center in Amsterdam; directs the Amsterdam Machine Learning Lab (AMLAB); and co-directs the Qualcomm-UvA deep learning lab (QUVA), the Bosch-UvA Deep Learning lab (DELTA) and the AML4Health Lab.
             <br>
             <hr>      
 
 
 
-            <h3><a href="https://jmtomczak.github.io/">Jakub Tomczak</a> </h3>
-            <h4>Householder meets Sylvester: Normalizing flows for variational inference</h4> 
-            Stochastic variational inference allows for posterior inference in increasingly large and complex problems using stochastic gradient ascent. However, despite its many success, it has drawbacks compared to other inference methods such as MCMC. Variational inference searches for the best posterior approximation within a parametric family of distributions, and, thus, the true posterior distribution can only be recovered exactly if it happens to be in the chosen family. In particular, with widely used simple variational families such as diagonal covariance Gaussian distributions, the variational approximation is likely to be insufficient. Therefore, designing tractable and more expressive variational families is an important problem.
-            <br>
-            Recently, a general framework for constructing more flexible variational distributions, called normalizing flows, was proposed. The idea of normalizing flows is to transform a base (simple) density through a number of invertible parametric transformations with tractable Jacobians into more complicated distributions. In this talk, I will present two families of normalizing flows to improve the variational inference. The first one is a volume-preserving flow based on Householder transformations that allows to efficiently parameterize variational posteriors. Next, I will show non-linear normalizing flows based on the Sylvester determinant lemma and QR-decomposition.
+            <h3><a href="https://enalisnick.github.io/">Eric Nalisnick</a> </h3>
+            <h4>Detecting Distribution Shift with Deep Generative Models</h4> 
+            Detecting distribution shift is crucial for ensuring the safety and integrity of autonomous systems and computational pipelines.  Recent advances in deep generative models (DGMs) make them attractive for this use case.  However, their application is not straightforward: DGMs fail to detect distribution shift when using naive likelihood thresholds.  In this talk, I synthesize the recent literature on using DGMs for out-of-distribution detection.  I categorize techniques into two broad classes: model-selection and omnibus methods.  I close the talk by arguing that many real-world, safety-critical scenarios require the latter approach.
             <br>   
             <br>   
-            <strong>Bio:</strong> Jakub Tomczak is a deep learning research engineer at Qualcomm AI Research since October 2018. Before, he was a postdoc (Marie Sklodowska-Curie Individual-Fellow) in Amsterdam Machine Learning Lab (AMLAB) at the University of Amsterdam under Prof. Max Welling supervision, from Oct 2016 to Sept 2018. He has received Ph.D. in machine learning (with honors) from Wroclaw University of Technology (Poland) in March 2013. After Ph.D. studies he was a postdoc and an assistant professor therein, and he worked on ensemble learning, probabilistic modeling and deep learning (with a special interest in Boltzmann machines) applied to credit scoring, medicine (clinical data) and image analysis. Recently, his research is focused on deep generative modeling (Variational Auto-Encoders) for medical imaging and image analysis.
+            <strong>Bio:</strong> Eric Nalisnick is a postdoctoral researcher at the Cambridge Machine Learning Group.  His research interests span statistical machine learning, with an emphasis on prior specification and out-of-distribution detection.  He completed his PhD with Padhraic Smyth at the University of California, Irvine.  Eric has previously held research positions at DeepMind, Microsoft, Twitter, and Amazon.
             <br>
             <hr>         
 
 
 
 
-            <h3><a href="http://www.jessebett.com/">Jesse Bettencourt</a> </h3>
-            <h4>Neural Ordinary Differential Equations for Continuous Normalizing Flows</h4> 
-            This talk will review a family of continuous-depth neural network models, highlighting their properties, such as invertibility, which make them well-suited to normalizing flows. Instead of specifying a discrete sequence of hidden layers, we parameterize the derivative of hidden state with a neural network. This instantaneous change in hidden state along with an initial state given by model inputs, such as data, defines an initial value problem. The output of the model is computed by solving the initial value problem, integrating the derivative, with a numerical solver. 
-            These continuous-depth models have constant memory cost, adapt their evaluation strategy to each input, and can explicitly trade numerical precision for computational cost. Another significant benefit is that the model can be inverted by integrating the parameterized dynamics backwards in time. 
-            In addition to parameterizing and integrating the change in hidden state we can also track the corresponding instantaneous change in probability density, which we call Continuous Normalizing Flows. This results in an invertible generative model with unbiased density estimation and one-pass sampling. Further, by estimating terms in the change of density we can scale to high-dimensional data without restricting model architecture in a method called FFJORD.
+            <h3><a href="https://emiliendupont.github.io/">Emilien Dupont</a> </h3>
+            <h4>Representational limitations of invertible models</h4> 
+            This talk will review recent work on the representational limitations of invertible models both in the context of neural ODEs and normalizing flows. In particular, it has been shown that invertible neural networks are topology preserving and can therefore not map between spaces with different topologies. This has both theoretical and numerical consequences. In the context of normalizing flows for example, the source and target density often have different topologies leading to numerically ill-posed models and training. On top of reviewing the theoretical and practical aspects of this, the talk will also cover several recent models, methods and ideas for alleviating some of these limitations.
             <br>   
             <br>   
-            <strong>Bio:</strong> Jesse Bettencourt is a graduate student in Machine Learning at the University of Toronto and the Vector Institute supervised by Drs. David Duvenaud and Roger Grosse. He is currently pursuing follow-up research on Neural Ordinary Differential Equations, and is generally interested in approximate inference for latent variable models. He also teaches Probabilistic Learning and Reasoning.
+            <strong>Bio:</strong> Emilien Dupont is a PhD student at Oxford supervised by Yee Whye Teh and Arnaud Doucet. His recent research interests include invertible models, continuous depth neural networks, neural rendering and the intersection of physics and machine learning. Prior to his PhD he studied computational math at Stanford and theoretical physics at Imperial College.
+            <br>
+            <hr>         
+
+
+
+
+
+
+            <h3><a href="https://cheng-zhang.org/">Cheng Zhang</a> </h3>
+            <h4>Divergence Measures in Variational Inference and How to Choose Them</h4> 
+            Variational inference (VI) plays an essential role in approximate Bayesian inference due to its computational efficiency and broad applicability. Crucial to the performance of VI is the selection of the associated divergence measure, as VI approximates the intractable distribution by minimizing this divergence. In this talk, I will discuss variational inference with different divergence measures first. Then, I will present a new meta-learning algorithm to learn the divergence metric suited for the task of interest, automating the design of VI methods.
+            <br>   
+            <br>   
+            <strong>Bio:</strong> Cheng Zhang is a senior researcher at the All Data AI group at Microsoft Research Cambridge (MSRC), UK. Currently, she leads the Project Azua: Data efficient Decision Making in MSRC. She is interested in both machine learning theory, including Bayesian deep learning, approximate inference, causality, Bayesian experimental design and reinforcement learning for sequential decision making, as well as various machine learning applications with business and social impact.
             <br>
             <hr>    
 
 
 
-            <h3> <a href="https://jhjacobsen.github.io/">Jorn-Henrik Jacobsen</a> </h3>  
-            <h4>Invertible Neural Networks for Understanding and Controlling Learned Representations</h4> 
-            One way to understand deep networks is to analyze the information they discard about the input from layer to layer. However, estimating mutual information between input and hidden representations is intractable in high dimensional problems. Invertible deep networks circumvent this problem by guaranteeing information preservation. In this talk, I will discuss surprising similarities between non-invertible and invertible deep networks. Further, I will discuss how invertible models give rise to an alternative viewpoint on adversarial examples. Under this viewpoint adversarial examples are a consequence of excessive invariances learned by the classifier, manifesting themselves in striking failures when evaluating the model on out of distribution inputs. I will discuss how the commonly used cross-entropy objective encourages such overly invariant representations. Finally, I will present an extension to cross-entropy that, by exploiting properties of invertible deep networks, enables control of erroneous invariances in theory and practice.
+
+
+
+
+            <h3><a href="https://adjidieng.github.io/">Adji Bousso Dieng</a> </h3>
+            <h4>Adversarial Learning of Prescribed Generative Models</h4> 
+            Parameterizing latent variable models with deep neural networks has become a major approach to probabilistic modeling. The usual way of fitting these deep latent variable models is to use maximum likelihood. This gives rise to variational autoencoders (VAEs). They jointly learn an approximate posterior distribution over the latent variables and the model parameters by maximizing a lower bound to the log-marginal likelihood of the data. In this talk, I will present an alternative approach to fitting parameters of deep latent-variable models. The idea is to marry adversarial learning and entropy regularization. The family of models fit with this procedure is called Prescribed Generative Adversarial Networks (PresGANs). I will describe PresGANs and discuss how they generate samples with high perceptual quality while avoiding the ubiquitous mode collapse issue of GANs. 
             <br>   
             <br>   
-            <strong>Bio:</strong> Dr. Jörn Jacobsen is a postdoc at Vector Institute and University of Toronto, supervised by Richard Zemel and collaborating with faculty members David Duvenaud and Roger Grosse. Previously, he was a postdoc in the lab of Matthias Bethge in Tübingen. Before, he did his Ph.D. at the University of Amsterdam under supervision of Arnold Smeulders. Currently, he mainly works on invertible networks, generative modeling, out of distribution generalization and re-purposing adversarial examples for understanding learned representations.
+            <strong>Bio:</strong> Adji Bousso Dieng is a Senegalese Statistician and Computer Scientist. She received her PhD from Columbia University where she was jointly advised by David Blei and John Paisley. Her research is in Artificial Intelligence and Statistics, bridging probabilistic graphical models and deep learning. Dieng's research has received multiple recognitions including a Dean Fellowship from Columbia University, a Microsoft Azure Research Award, a Google PhD Fellowship in Machine Learning, and a rising star in Machine Learning nomination by the University of Maryland. Prior to Columbia, Dieng worked as a Junior Professional Associate at the World Bank. She did her undergraduate studies in France where she attended Lycee Henri IV and Telecom ParisTech--France's Grandes Ecoles system. She spent the third year of Telecom ParisTech's curriculum at Cornell University where she was awarded a Master in Statistics.
             <br>
-            <hr>    
+            <hr>  
+
+
+
+
+
+
+
+
+            <h3><a href="http://theoryandpractice.org/">Kyle Cranmer</a> </h3>
+            <h4>Likelihood Models for Science</h4> 
+            Statistical inference is at the heart of the scientific method, and the likelihood function is at the heart of statistical inference. However, many scientific theories are formulated as mechanistic models that do not admit a tractable likelihood. While traditional approaches to confronting this problem may seem somewhat naive, they reveal numerous other considerations in the scientific workflow beyond the approximation error of the likelihood. I will highlight how normalizing flows and other techniques from machine learning are impacting scientific practice, discuss current challenges for state-of-the-art methods, and identify promising new directions in this line of research.
+            <br>   
+            <br>   
+            <strong>Bio:</strong> Kyle Cranmer is a Professor of Physics and Data Science and the Executive Director of the Moore-Sloan Data Science Environment at New York University. His background is in experimental particle physicists. He developed a framework that enables collaborative statistical modeling, which was used extensively for the discovery of the Higgs boson in July, 2012.  He was awarded the Presidential Early Career Award for Science and Engineering in 2007 and the National Science Foundation's Career Award in 2009. His current interests are at the intersection of physics, statistics, and machine learning.
+            <br>
+            <hr>  
+
+
+
+
+
+            <h3><a href="https://www.linkedin.com/in/martin-jankowiak-16789589/">Martin Jankowiak</a> </h3>
+            <h4>Flows in Probabilistic Modeling & Inference</h4> 
+            I give an overview of the many uses of flows in probabilistic modeling and inference. I focus on settings in which flows are used to speed up or otherwise improve inference (i.e. settings in which flows are not part of the model specification), including applications to Optimal Experimental Design, Hamiltonian Monte Carlo, and Likelihood-Free Inference. I conclude with a brief discussion of how flows enter into probabilistic programming language (PPL) systems and suggest research directions that are important for improved PPL integration.
+            <br>   
+            <br>   
+            <strong>Bio:</strong> Martin Jankowiak is a machine learning fellow at the Broad Institute whose research focuses on probabilistic machine learning. He is a co-creator of the Pyro probabilistic programming language.
+            <br>
+            <hr>  
+
 
 
 
