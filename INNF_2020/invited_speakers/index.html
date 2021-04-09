@@ -1,0 +1,253 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Dustin Tran, edited by Chris Cremer">
+  <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+  <title>Invertible Neural Nets and Normalizing Flows - Call for Papers</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+</head>
+
+<body>
+  <!-- <div class="container" style="margin-left:20px"> -->
+  <div class="container">
+
+    <div class="row" style="padding:20px">
+
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="../img/innf_logo.gif" style="height:70px" hspace="50"></img>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-9">
+        <div class="row" style="margin-bottom:-10px;">
+          <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+            <!--
+            <a href="http://nips.cc">
+              <img src="/img/nips.svg" style="margin:0px -90px
+              0 0; height:140px; width:250px;">
+            </a>
+            -->
+          </div>
+          <div class="hidden-xs">
+            <!--
+            <a href="http://nips.cc">
+              <img src="/img/nips.svg" class="pull-right" style="margin:0px -90px
+              0 0; height:140px; width:250px;">
+            </a>
+            -->
+          </div>
+          <!-- <h2>Workshop on Invertible Neural Nets and Normalizing Flows</h2> -->
+          <h1 align="center"> INNF+ 2020 </h1>
+          <br>
+
+
+          <!--           <p class="lead">
+            December 2, 2018<br>
+            <a href="https://goo.gl/maps/GZ2CkVfpFhL2">Le 1000 Conference Center</a><br>
+            <a href="https://goo.gl/maps/GZ2CkVfpFhL2">1000 Rue de la Gauchetière Ouest</a><br>
+            <a href="https://goo.gl/maps/GZ2CkVfpFhL2">Montréal, QC H3B 0A2, Canada</a><br>
+          </p> -->
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-3 col-md-3" id="sidebar" role="navigation">
+        <hr>
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../schedule/index.html">Schedule</a></li>
+          <li><a href="../call/index.html">Call for Papers</a></li>
+          <li><a href="../reviewer_instructions/index.html">Reviewer Instructions</a></li>
+          <li><a href="../author_instructions/index.html">Author Instructions</a></li>
+          <li><a href="../how_it_works/index.html">Virtual Workshop: How It Works</a></li>
+          <li><a href="../accepted_papers/index.html">Accepted Papers</a></li>
+          <li><a href="../invited_speakers/index.html">Invited Speakers</a></li>
+        </ul>
+        <hr>
+        <ul class="nav temp">
+          <li style="padding:0px 15px 5px;">Organizers</li>
+          <li><a href="https://chinweihuang.com/">Chin-Wei Huang</a></li>
+          <li><a href="https://mila.quebec/en/person/david-scott-krueger/">David Krueger</a></li>
+          <li><a href="https://riannevdberg.github.io/">Rianne van den Berg</a></li>
+          <li><a href="https://gpapamak.github.io/">George Papamakarios</a></li>
+          <!-- <li><a href="https://aidangomez.ca/">Aidan Gomez</a></li> -->
+          <li><a href="https://chriscremer.bitbucket.io/">Chris Cremer</a></li>
+          <li><a href="http://rtqichen.com">Ricky Chen</a></li>
+          <!-- <li><a href="https://aaroncourville.wordpress.com/">Aaron Courville</a></li> -->
+          <li><a href="https://danilorezende.com/">Danilo Rezende</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-12 col-sm-9 col-md-9">
+        <hr>
+        <div class="row">
+
+
+            
+            <h2>Invited Speakers</h2>
+            <hr>
+
+
+
+            <h3><a href="https://staff.fnwi.uva.nl/m.welling/">Max Welling</a> </h3>
+            <h4>Unifying VAEs and Flows</h4> 
+            VAEs and Flows are two of the most popular methods for density estimation (well, except GANs I guess, but nevermind... 😱). In this work we will argue they are really two sides of the same coin. A flow is based on deterministically transforming an input density through an invertible transformation to a target density. If the transformation changes a volume element we pick up a log-Jacobian term. After decomposing the ELBO in the only way that was not yet considered in the literature, we find that the log-Jacobian corresponds to log[p(x|z)/q(z|x)] of a VAE, where the maps q and p are now stochastic. This suggests a third possibility that bridges the gap between the two: a surjective map which is deterministic and surjective in one direction, and probabilistic in the reverse direction. We find that these ideas unify many methods out there in the literature, such as dequantization, and augmented flows, and we also add a few new methods of our own based on our SurVAE Flows framework. If time permits I will also say a few words on a new type of flow based on the exponential map which is trivially invertible and adds a new tool to the invertible flows toolbox.
+            <br>   
+            <br>   
+            <strong>Bio:</strong> Max Welling is a computer scientist who works in artificial intelligence (expert systems, machine learning, robotics). He holds a research chair in machine learning at the University of Amsterdam; is co-founder of Scyfer BV, a university spin-off in deep learning; and has held postdoc positions at the California Institute of Technology, University College London and the University of Toronto. Welling received his PhD in 1998 under supervision of Nobel laureate Gerard ‘t Hooft. He has served on the editorial boards of JMLR and JML; was an associate editor for Neurocomputing and JCGS; and has received grants from Google, Facebook, Yahoo, NSF, NIH, NWO and ONR-MUR. Currently, Welling serves on the board of the NIPS foundation and of the Data Science Research Center in Amsterdam; directs the Amsterdam Machine Learning Lab (AMLAB); and co-directs the Qualcomm-UvA deep learning lab (QUVA), the Bosch-UvA Deep Learning lab (DELTA) and the AML4Health Lab.
+            <br>
+            <hr>      
+
+
+
+            <h3><a href="https://enalisnick.github.io/">Eric Nalisnick</a> </h3>
+            <h4>Detecting Distribution Shift with Deep Generative Models</h4> 
+            Detecting distribution shift is crucial for ensuring the safety and integrity of autonomous systems and computational pipelines.  Recent advances in deep generative models (DGMs) make them attractive for this use case.  However, their application is not straightforward: DGMs fail to detect distribution shift when using naive likelihood thresholds.  In this talk, I synthesize the recent literature on using DGMs for out-of-distribution detection.  I categorize techniques into two broad classes: model-selection and omnibus methods.  I close the talk by arguing that many real-world, safety-critical scenarios require the latter approach.
+            <br>   
+            <br>   
+            <strong>Bio:</strong> Eric Nalisnick is a postdoctoral researcher at the Cambridge Machine Learning Group.  His research interests span statistical machine learning, with an emphasis on prior specification and out-of-distribution detection.  He completed his PhD with Padhraic Smyth at the University of California, Irvine.  Eric has previously held research positions at DeepMind, Microsoft, Twitter, and Amazon.
+            <br>
+            <hr>         
+
+
+
+
+            <h3><a href="https://emiliendupont.github.io/">Emilien Dupont</a> </h3>
+            <h4>Representational limitations of invertible models</h4> 
+            This talk will review recent work on the representational limitations of invertible models both in the context of neural ODEs and normalizing flows. In particular, it has been shown that invertible neural networks are topology preserving and can therefore not map between spaces with different topologies. This has both theoretical and numerical consequences. In the context of normalizing flows for example, the source and target density often have different topologies leading to numerically ill-posed models and training. On top of reviewing the theoretical and practical aspects of this, the talk will also cover several recent models, methods and ideas for alleviating some of these limitations.
+            <br>   
+            <br>   
+            <strong>Bio:</strong> Emilien Dupont is a PhD student at Oxford supervised by Yee Whye Teh and Arnaud Doucet. His recent research interests include invertible models, continuous depth neural networks, neural rendering and the intersection of physics and machine learning. Prior to his PhD he studied computational math at Stanford and theoretical physics at Imperial College.
+            <br>
+            <hr>         
+
+
+
+
+
+
+            <h3><a href="https://cheng-zhang.org/">Cheng Zhang</a> </h3>
+            <h4>Divergence Measures in Variational Inference and How to Choose Them</h4> 
+            Variational inference (VI) plays an essential role in approximate Bayesian inference due to its computational efficiency and broad applicability. Crucial to the performance of VI is the selection of the associated divergence measure, as VI approximates the intractable distribution by minimizing this divergence. In this talk, I will discuss variational inference with different divergence measures first. Then, I will present a new meta-learning algorithm to learn the divergence metric suited for the task of interest, automating the design of VI methods.
+            <br>   
+            <br>   
+            <strong>Bio:</strong> Cheng Zhang is a senior researcher at the All Data AI group at Microsoft Research Cambridge (MSRC), UK. Currently, she leads the Project Azua: Data efficient Decision Making in MSRC. She is interested in both machine learning theory, including Bayesian deep learning, approximate inference, causality, Bayesian experimental design and reinforcement learning for sequential decision making, as well as various machine learning applications with business and social impact.
+            <br>
+            <hr>    
+
+
+
+
+
+
+
+            <h3><a href="https://adjidieng.github.io/">Adji Bousso Dieng</a> </h3>
+            <h4>Adversarial Learning of Prescribed Generative Models</h4> 
+            Parameterizing latent variable models with deep neural networks has become a major approach to probabilistic modeling. The usual way of fitting these deep latent variable models is to use maximum likelihood. This gives rise to variational autoencoders (VAEs). They jointly learn an approximate posterior distribution over the latent variables and the model parameters by maximizing a lower bound to the log-marginal likelihood of the data. In this talk, I will present an alternative approach to fitting parameters of deep latent-variable models. The idea is to marry adversarial learning and entropy regularization. The family of models fit with this procedure is called Prescribed Generative Adversarial Networks (PresGANs). I will describe PresGANs and discuss how they generate samples with high perceptual quality while avoiding the ubiquitous mode collapse issue of GANs. 
+            <br>   
+            <br>   
+            <strong>Bio:</strong> Adji Bousso Dieng is a Senegalese Statistician and Computer Scientist. She received her PhD from Columbia University where she was jointly advised by David Blei and John Paisley. Her research is in Artificial Intelligence and Statistics, bridging probabilistic graphical models and deep learning. Dieng's research has received multiple recognitions including a Dean Fellowship from Columbia University, a Microsoft Azure Research Award, a Google PhD Fellowship in Machine Learning, and a rising star in Machine Learning nomination by the University of Maryland. Prior to Columbia, Dieng worked as a Junior Professional Associate at the World Bank. She did her undergraduate studies in France where she attended Lycee Henri IV and Telecom ParisTech--France's Grandes Ecoles system. She spent the third year of Telecom ParisTech's curriculum at Cornell University where she was awarded a Master in Statistics.
+            <br>
+            <hr>  
+
+
+
+
+
+
+
+
+            <h3><a href="http://theoryandpractice.org/">Kyle Cranmer</a> </h3>
+            <h4>Likelihood Models for Science</h4> 
+            Statistical inference is at the heart of the scientific method, and the likelihood function is at the heart of statistical inference. However, many scientific theories are formulated as mechanistic models that do not admit a tractable likelihood. While traditional approaches to confronting this problem may seem somewhat naive, they reveal numerous other considerations in the scientific workflow beyond the approximation error of the likelihood. I will highlight how normalizing flows and other techniques from machine learning are impacting scientific practice, discuss current challenges for state-of-the-art methods, and identify promising new directions in this line of research.
+            <br>   
+            <br>   
+            <strong>Bio:</strong> Kyle Cranmer is a Professor of Physics and Data Science and the Executive Director of the Moore-Sloan Data Science Environment at New York University. His background is in experimental particle physicists. He developed a framework that enables collaborative statistical modeling, which was used extensively for the discovery of the Higgs boson in July, 2012.  He was awarded the Presidential Early Career Award for Science and Engineering in 2007 and the National Science Foundation's Career Award in 2009. His current interests are at the intersection of physics, statistics, and machine learning.
+            <br>
+            <hr>  
+
+
+
+
+
+            <h3><a href="https://www.linkedin.com/in/martin-jankowiak-16789589/">Martin Jankowiak</a> </h3>
+            <h4>Flows in Probabilistic Modeling & Inference</h4> 
+            I give an overview of the many uses of flows in probabilistic modeling and inference. I focus on settings in which flows are used to speed up or otherwise improve inference (i.e. settings in which flows are not part of the model specification), including applications to Optimal Experimental Design, Hamiltonian Monte Carlo, and Likelihood-Free Inference. I conclude with a brief discussion of how flows enter into probabilistic programming language (PPL) systems and suggest research directions that are important for improved PPL integration.
+            <br>   
+            <br>   
+            <strong>Bio:</strong> Martin Jankowiak is a machine learning fellow at the Broad Institute whose research focuses on probabilistic machine learning. He is a co-creator of the Pyro probabilistic programming language.
+            <br>
+            <hr>  
+
+
+
+
+        </div>
+
+        <footer>
+          &nbsp;
+        </footer>
+
+      </div>
+
+      <!-- JavaScript -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      </script>
+      <script type="text/javascript" src="../js/main.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
