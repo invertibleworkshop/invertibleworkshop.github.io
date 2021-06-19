@@ -21,3 +21,31 @@ span:lang(cn) {
   text-decoration: underline;
   background-color: transparent;
 }
+
+.authors{
+  font-style: italic;
+}
+
+.collapsible {
+  background-color: #9;
+  color: #0e9ce0;
+  cursor: pointer;
+  padding: 0 5px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 12px;
+}
+
+.active, .collapsible:hover {
+  background-color: #0e9ce0;
+  color: white;
+}
+
+.content {
+  padding: 10px;
+  display: none;
+  overflow: hidden;
+  background-color: lightgray;
+  color: black;
+}
